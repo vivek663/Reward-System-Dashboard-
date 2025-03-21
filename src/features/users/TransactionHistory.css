@@ -1,0 +1,142 @@
+.transaction-history {
+  padding: 1rem;
+}
+
+.transaction-history h2 {
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.no-transactions {
+  text-align: center;
+  padding: 3rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.no-transactions .icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.no-transactions p {
+  color: #6b7280;
+  margin: 0;
+}
+
+.transactions-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.transaction-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.transaction-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.transaction-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.point-change {
+  font-size: 1.25rem;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.point-change.positive {
+  color: #059669;
+}
+
+.point-change.negative {
+  color: #dc2626;
+}
+
+.reason {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.transaction-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.balance {
+  font-weight: 500;
+}
+
+.timestamp {
+  color: #9ca3af;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.page-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #4f46e5;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-button:hover:not(:disabled) {
+  background: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5;
+}
+
+.page-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .transaction-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .page-button {
+    width: 100%;
+  }
+}
